@@ -38,7 +38,7 @@ type SCM struct {
 func main() {
 	http.Handle("/metrics", promhttp.Handler())
 	go func() {
-		log.Fatal(http.ListenAndServe(":8080", nil))
+		log.Fatal(http.ListenAndServe(":8232", nil))
 	}()
 
 	stdinBuf := bufio.NewScanner(os.Stdin)
